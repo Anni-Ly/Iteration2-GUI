@@ -26,14 +26,12 @@ public class PatientRegister {
             throw new Exception("Already in list");
         }
     }
-    // The method should remove the patientToRemove from the patients list.
+    // The method remove the patientToRemove from the patients list.
     public void removePatient(Patient patient) {
         if (this.patients.contains(patient)) {this.patients.remove(patient);}
-        // fill in code here
+
     }
-    // The method should first print the current number of patients in the patients-list.
-    // Then loop through the patients in the patients-list,
-    // and print out their name and cpr.
+
     public void printPatients() {
         // Fill in code here
         System.out.println("Number of patients: " + this.patients.size());
@@ -50,7 +48,7 @@ public class PatientRegister {
     }
 
     public String listPatients() {
-        // Fill in code here
+
         String returnString;
         returnString="Number of patients: " + this.patients.size() +"\n\n";
         returnString+="+-------------+--------------------------------+--------+-----+------------------+----------------------------------------+\n";
@@ -60,8 +58,7 @@ public class PatientRegister {
 
         for (Patient p : this.patients) {
             String fullName = p.getFirstName()+" "+p.getLastName();
-            //String newLine = String.format("CPR-number: %11s  Name: %-30s  Gender: %6s  Age: %3d  Phone: %16s  Email: %s\n",
-            //        p.getCpr(),fullName,p.getGender(),p.getAge(),p.getPhoneNumber(),p.getEmail());
+
             String newLine = String.format("| %11s | %-30s | %-6s | %3d | %-16s | %-38s |\n",
                     p.getCpr(),fullName,p.getGender(),p.getAge(),p.getPhoneNumber(),p.getEmail(),p.getCoronaData(),p.getCoronaLocation(),p.getSenorData());
             String newLine2 = String.format("| %11s | %-30s | %-30s |\n",
