@@ -1,7 +1,6 @@
 package sample;
 
 public class Clinic {
-    // Class to hold a clinic and the associated holidays
 
     private Integer clinicNumber;
     private Holidays holidays;
