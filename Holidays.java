@@ -7,23 +7,20 @@ public class Holidays {
     private ArrayList<LocalDate> holidays;
 
     public Holidays() {
-        // The constructor
         this.holidays = new ArrayList<LocalDate>();
     }
     public void addHoliday(LocalDate holiday) {
-        // add a holiday to the list of holidays - only if it is not in the list already
         if (! this.holidays.contains(holiday)) {this.holidays.add(holiday);}
     }
     public void removeHoliday(LocalDate holiday) {
-        // remove a holiday from the list of holidays - only if it is in the list already
         if (this.holidays.contains(holiday)) {this.holidays.remove(holiday);}
     }
 
-    public ArrayList<LocalDate> getHolidays() { // return a list of holidays
+    public ArrayList<LocalDate> getHolidays() { 
         return holidays;
     }
 
-    public Boolean containsDay(LocalDate holiday) { // Check of the date in in the list of holidays
+    public Boolean containsDay(LocalDate holiday) {
 
         return this.holidays.contains(holiday);
     }
@@ -36,7 +33,7 @@ public class Holidays {
 
     }
 
-    public Integer getSize() { // Return the number of holidays in the holidays list
+    public Integer getSize() {
         return this.holidays.size();
     }
 }
