@@ -9,22 +9,9 @@ import java.util.regex.Pattern;
 public class DataValidator {
 
 
-    public static boolean isValidDate(String dateString) {
-        Boolean result = false;
-
-        try {
-            DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            LocalDate b = LocalDate.parse(dateString, dateFormatter);
-            return true;
-        }
-        catch (DateTimeParseException dtpe) {
-            System.err.println("Illegal date:"+dateString);
-            return false;
-        }
-
-    }
     public static boolean isValidCPR(String cpr) {
         Boolean result = false;
+        // Check the lenght
         if (cpr.length() == 11) {
             result = true;
         } else {
@@ -34,7 +21,7 @@ public class DataValidator {
         String birthday = cpr.substring(0,6);
         Character hyphen = cpr.charAt(6);
         String lastNumber = cpr.substring(7,11);
-        try {
+        try { 
             int d = Integer.parseInt(birthday);
         } catch (NumberFormatException nfe) {
             System.out.println("First part is not a number");
@@ -43,7 +30,7 @@ public class DataValidator {
         if (! hyphen.equals('-')) {
             System.out.println("Missing hyphen");
             return false; };
-        try {
+        try { 
             int running = Integer.parseInt(lastNumber);
         } catch (NumberFormatException nfe) {
             System.out.println("Last part is not a number");
@@ -104,6 +91,7 @@ public class DataValidator {
     public boolean isValidAddress(String address) {
         return false;
     }
+    
 
+    }
 
-}
