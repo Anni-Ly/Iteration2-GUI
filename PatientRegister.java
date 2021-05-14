@@ -3,13 +3,10 @@ package sample;
 import java.util.ArrayList;
 
 public class PatientRegister {
-    // An arraylist that will hold the registered patients
     public ArrayList<Patient> patients;
-    // Constructor - EXPLAIN
     public PatientRegister() {
         this.patients = new ArrayList<Patient>();
     }
-    // The method should check if the patient already exists in the patients-list. If not, the patient should be added to the list.
     public void addPatient(Patient patient) throws Exception{
         // fill in code here
         Boolean contains = false;
@@ -26,14 +23,12 @@ public class PatientRegister {
             throw new Exception("Already in list");
         }
     }
-    // The method remove the patientToRemove from the patients list.
     public void removePatient(Patient patient) {
         if (this.patients.contains(patient)) {this.patients.remove(patient);}
 
     }
 
     public void printPatients() {
-        // Fill in code here
         System.out.println("Number of patients: " + this.patients.size());
         for (Patient p : this.patients) {
             System.out.println("Name:" + p.getFirstName() +" "+ p.getLastName() + " - "+
