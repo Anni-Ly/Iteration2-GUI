@@ -131,36 +131,36 @@ public class PatientController {
 
 
         if (!DataValidator.isValidCPR(cprInput)){
-            cprText.setStyle("-fx-background-color: yellow");
+            cprText.setStyle("-fx-background-color: pink");
             validInput = false;
 
         }
         if (!emailInput.isEmpty() && ! DataValidator.isValidEmail(emailInput)){
-            emailText.setStyle("-fx-background-color: yellow");
+            emailText.setStyle("-fx-background-color: pink");
             validInput = false;
         }
 
         if (!phoneInput.isEmpty()  && ! DataValidator.isValidPhone(phoneInput)){
-            phoneText.setStyle("-fx-background-color: yellow");
+            phoneText.setStyle("-fx-background-color: pink");
         }
 
         if (firstNameInput.isEmpty() || ! DataValidator.isValidName(firstNameInput)){
-            firstNameText.setStyle("-fx-background-color: yellow");
+            firstNameText.setStyle("-fx-background-color: pink");
             validInput = false;
         }
 
         if (lastNameInput.isEmpty() || ! DataValidator.isValidName(lastNameInput)){
-            lastNameText.setStyle("-fx-background-color: yellow");
+            lastNameText.setStyle("-fx-background-color: pink");
             validInput = false;
         }
 
         if (coronaDataInput.isEmpty() || ! DataValidator.isValidName(coronaDataInput)){
-            coronaDataText.setStyle("-fx-background-color: yellow");
+            coronaDataText.setStyle("-fx-background-color: pink");
             validInput = false;
         }
 
         if (coronaLocationInput.isEmpty() || ! DataValidator.isValidName(coronaLocationInput)){
-            coronaLocationText.setStyle("-fx-background-color: yellow");
+            coronaLocationText.setStyle("-fx-background-color: pink");
             validInput = false;
         }
 
@@ -177,7 +177,7 @@ public class PatientController {
 
                 e.printStackTrace();
 
-                cprText.setStyle("-fx-background-color: yellow");
+                cprText.setStyle("-fx-background-color: pink");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText("Registration problem");
                 alert.setContentText("CPR-number " + cprInput +" already found in register");
